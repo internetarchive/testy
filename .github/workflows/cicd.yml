@@ -2,6 +2,7 @@ name: CICD
 on: push
 jobs:
   cicd:
+    # this is a nice variante for HUGE repos
     runs-on: ubuntu-latest
     steps:
       # this is like https://github.com/internetarchive/build/blob/main/action.yml
@@ -64,6 +65,5 @@ jobs:
           BASE_DOMAIN: 'dev.archive.org'
           NOMAD_TOKEN: ${{ secrets.NOMAD_TOKEN }}
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NOMAD_VAR_HOSTNAMES: '["testy"]'
           NOMAD_VAR_COUNT: 1
           NOMAD_VAR_PORTS: '{ 80 = "http" }'
