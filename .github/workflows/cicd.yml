@@ -4,3 +4,4 @@ jobs:
     uses: internetarchive/cicd/.github/workflows/cicd.yml@main
     secrets:
       NOMAD_TOKEN: ${{ secrets.NOMAD_TOKEN }}
+      NOMAD_VAR_PORTS: '{ 80 = "http" }'
