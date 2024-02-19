@@ -6,4 +6,3 @@ jobs:
       NOMAD_TOKEN: ${{ secrets.NOMAD_TOKEN }}
     with:
       NOMAD_VAR_PORTS: '{ 80 = "http" }'
-      PLATFORMS: linux/amd64,linux/arm64
